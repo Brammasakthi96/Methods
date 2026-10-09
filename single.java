@@ -1,25 +1,32 @@
-//SINGLE INHERITANCE
+//ONE PARENT CLASS TWO CHILD CLASS HIERARCHICAL USING THIS KEYWORD
 package sarath;
-class parent
+class numbers
 {
-	void displayName(String name) 
+	int a=10;
+	int b=20;
+}
+class addition extends numbers//1.CHILD CLASS USING PARENT CLASS
+{
+	void add()
 	{
-		System.out.println("My name is "+name);
-		
+	   System.out.println("Addition of a and b:"+(this.a+this.b));
 	}
 }
-class child extends parent
+class minus extends numbers//2.CHILD CLASS USING PARENT CLASS
 {
-	void age(int age)
+	void sub()
 	{
-		System.out.println("My age is "+age);
+		System.out.println("Subtraction of a and b: "+(this.a-this.b));
 	}
 }
 public class single {
 	public static void main(String[] args) 
 	{
-       child c=new child();  //child class access the parent method and its own method
-       c.displayName("Amar");
-       c.age(29);
-  	}
+		addition a=new addition();
+		a.add();
+		minus s=new minus();
+		s.sub();
+				
+	}
+
 }
